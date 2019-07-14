@@ -8,6 +8,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/geolocation": "^1.4.2",
+    "firebase": "^6.3.0",
     "react": "16.8.3",
     "react-native": "0.59.3",
     "react-native-maps": "git://github.com/react-native-community/react-native-maps.git#master",

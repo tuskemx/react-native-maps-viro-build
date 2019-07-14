@@ -28,6 +28,8 @@ var MAPS_NAVIGATOR_TYPE = 'MAPs';
 // be presented with a choice of AR or VR. By default, we offer the user a choice.
 var defaultNavigatorType = UNSET;
 
+import Login from './components/Login'
+
 export default class ViroSample extends Component {
   constructor() {
     super();
@@ -49,7 +51,7 @@ export default class ViroSample extends Component {
     // this.onBack = this.onBack.bind(this);
   }
 
-  addNinja = ninja => {};
+  addNinja = ninja => { };
 
   // Replace this function with the contents of _getVRNavigator() or _getARNavigator()
   // if you are building a specific type of experience.
@@ -88,6 +90,7 @@ export default class ViroSample extends Component {
             <Text style={localStyles.buttonText}>MAPS</Text>
           </TouchableHighlight>
         </View>
+        <Login />
       </View>
     );
   }

@@ -1,12 +1,18 @@
 import MapView from 'react-native-maps';
-import React, { Component } from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import Geolocation from '@react-native-community/geolocation'
+import React, { Component, Fragment } from 'react';
+import { Text, View, StyleSheet, Button, TouchableHighlight, Vibration } from 'react-native';
+
+
 
 // const Maps = () => {
 
 export default class Maps extends Component {
   state = {
-    color: '#FF0000'
+    color: '#FF0000',
+    latitude: 'change',
+    longitude: 'chagne',
+    errr: ''
   };
 
   handlePress = () => {
@@ -16,32 +22,57 @@ export default class Maps extends Component {
     });
   };
 
+  componentDidMount() {
+
+
+    Vibration.vibrate();
+    Geolocation.getCurrentPosition((info) => {
+      this.setState({
+        latitude: info.coords.latitude,
+        longitude: info.coords.longitude,
+
+      });
+    });
+    setTimeout(() => {
+      console.warn(this.state.latitude)
+      console.warn("hhello")
+    }, 5 * 1000)
+
+
+  }
+
   render() {
     // let { func } = this.props;
+    const location = {
+      latitude: 53.480759, longitude: -2.242631, title: "place", subtitle: "subplace"
+    }
     return (
-      <>
-        <View style={styles.container}>
-          <MapView
-            style={styles.map}
-            region={{
-              latitude: 53.480759,
-              longitude: -2.242631,
-              latitudeDelta: 0.015,
-              longitudeDelta: 0.0121
-            }}
-          />
-        </View>
-        <View>
-          <Button
-            // onPress={this.handlePress}
-            onPress={this.props.getExperienceButtonOnPress}
-            title="Back"
-            color={this.state.color}
-            accessibilityLabel="Navigate back a page"
-          />
-          <Text>Maps</Text>
-        </View>
-      </>
+
+      <Fragment>
+        <MapView
+          style={styles.map}
+          region={{
+            latitude: 53.480759,
+            longitude: -2.242631,
+            latitudeDelta: 0.015,
+            longitudeDelta: 0.0121
+          }}
+
+        >
+          <MapView.Marker coordinate={location} />
+        </MapView>
+
+
+        <Button
+          // onPress={this.handlePress}
+          onPress={this.props.getExperienceButtonOnPress}
+          title="Back"
+          color={this.state.color}
+          accessibilityLabel="Navigate back a page"
+        />
+        <Text>{this.state.latitude} {this.state.longitude}</Text>
+      </Fragment>
+
     );
   }
 }

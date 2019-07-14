@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/kellydavidson/Desktop/ViroMapVersion1/ViroSample/android/app/build/intermediates/incremental/mergeArDebugResources/merged.dir/values-ne-rNP/values-ne-rNP.xml",
+            "outputFile": "/home/tuskem/Desktop/viroLast/FinalViroMap/ViroSample/android/app/build/intermediates/incremental/mergeArDebugResources/merged.dir/values-ne-rNP/values-ne-rNP.xml",
             "map": [
                 {
-                    "source": "/Users/kellydavidson/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.1.aar/a37595b8ce2df3d5833d5c021c5d3342/res/values-ne-rNP/values-ne-rNP.xml",
+                    "source": "/home/tuskem/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.1.aar/37ec7eb72c360a2a0e6e19a4e8fb37eb/res/values-ne-rNP/values-ne-rNP.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

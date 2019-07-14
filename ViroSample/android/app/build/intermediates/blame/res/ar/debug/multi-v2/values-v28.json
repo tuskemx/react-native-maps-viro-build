@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/kellydavidson/Desktop/ViroMapVersion1/ViroSample/android/app/build/intermediates/incremental/mergeArDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "/home/tuskem/Desktop/viroLast/FinalViroMap/ViroSample/android/app/build/intermediates/incremental/mergeArDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/Users/kellydavidson/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/ead7dfa1ca4fea83c2b8b65df950df39/res/values-v28/values-v28.xml",
+                    "source": "/home/tuskem/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3a0c7f9497d8e8c1cb6bbb4f43473e4b/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
